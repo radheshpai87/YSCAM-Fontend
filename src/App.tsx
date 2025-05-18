@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Layout } from './components/Layout';
 import { HomePage } from './pages/HomePage';
@@ -8,6 +7,7 @@ import { ResourcesPage } from './pages/ResourcesPage';
 import { FeedbackPage } from './pages/FeedbackPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 import { ThemeProvider } from './context/ThemeContext';
+import ApiWakeupNotice from './components/ApiWakeupNotice';
 
 function App() {
   return (
@@ -22,6 +22,8 @@ function App() {
             <Route path="/feedback" element={<FeedbackPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
+          {/* Add the API wakeup notice component */}
+          <ApiWakeupNotice />
         </Layout>
       </BrowserRouter>
     </ThemeProvider>

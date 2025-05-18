@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Shield, AlertTriangle, Menu, X, BookOpen, MessageSquare, Moon, Sun } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTheme } from '../context/ThemeContext';
+import ApiStatusIndicator from './ApiStatusIndicator';
 
 export const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -150,6 +151,11 @@ export const Header: React.FC = () => {
             </Link>
           </motion.div>
           
+          {/* API Status Indicator */}
+          <div className="mr-3 hidden md:flex items-center">
+            <ApiStatusIndicator />
+          </div>
+          
           {/* Theme toggle button */}
           <motion.button
             className="ml-4 p-2 bg-gray-100 dark:bg-gray-700 rounded-full text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
@@ -163,6 +169,11 @@ export const Header: React.FC = () => {
         </nav>
 
         <div className="flex items-center space-x-2">
+          {/* API Status Indicator for mobile */}
+          <div className="p-2 md:hidden">
+            <ApiStatusIndicator compact />
+          </div>
+          
           {/* Theme toggle button for mobile */}
           <motion.button
             className="p-2 bg-gray-100 dark:bg-gray-700 rounded-full text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors md:hidden"
