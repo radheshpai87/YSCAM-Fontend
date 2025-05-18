@@ -335,8 +335,8 @@ export const VerifyPage: React.FC = () => {
               <Info className="h-5 w-5 text-yellow-500 dark:text-yellow-400 mr-2 flex-shrink-0 mt-0.5" />
               <div className="text-sm text-yellow-700 dark:text-yellow-300">
                 <p className="font-medium mb-1">Processing Time</p>
-                <p className="mb-2">Our API is hosted on Render's free tier and may be in sleep mode. First requests can take up to 30-60 seconds while the server wakes up.</p>
-                <p className="text-xs">Don't worry - we've implemented a robust system that will keep trying until a response is received, no matter how long it takes. Progress updates will appear during the process.</p>
+                <p className="mb-2">Our API may be in sleep mode. First requests can take up to 30-60 seconds while the server wakes up.</p>
+                <p className="text-xs">We've implemented a robust system that will keep trying until a response is received, no matter how long it takes. Progress updates will appear during the process.</p>
               </div>
             </div>
             
